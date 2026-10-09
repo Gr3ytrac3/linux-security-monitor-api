@@ -6,3 +6,14 @@ A small security monitoring API that receives Linux security events, identifies 
 ---
 
 <img src="https://github.com/Gr3ytrac3/linux-security-monitor-api/blob/9b351892ac2ce01a3c275a362a489e29ec9a04dd/assets/cover-channel-path-schema.png"/>
+
+
+## Overview
+
+### Installation
+
+### Configuration
+
+1. Step 1: Setup environnment
+
+### Execution instructions
