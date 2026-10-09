@@ -15,5 +15,3 @@ A small security monitoring API that receives Linux security events, identifies 
 ### Configuration
 
 1. Step 1: Setup environnment
-
-### Execution instructions
