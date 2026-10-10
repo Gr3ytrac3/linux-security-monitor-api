@@ -1,3 +1,5 @@
+# Data Validation
+
 import pytest
 from pydantic import TypeAdapter, ValidationError
 
@@ -52,7 +54,7 @@ def network_event(**overrides):
     event.update(overrides)
     return event
 
-
+# Valid auth through the adapter
 def test_failed_login_parses():
     event = adapter.validate_python(auth_event())
     assert event.event_type == "auth"

@@ -3,8 +3,7 @@
 from datetime import datetime, timezone
 from enum import Enum
 from pydantic import BaseModel, Field, ConfigDict, AwareDatetime, IPvAnyAddress
-from uuid import uuid4
- 
+from uuid import uuid4 
 
 # Literal for enforced string match, Union and Annoted for single entry point type that FastAPI endpoint can accept
 from typing import Literal, Union, Annotated
