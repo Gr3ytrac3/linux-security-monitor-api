@@ -16,11 +16,11 @@ Here's the detailed installation and each steps toward the completed pirture of 
 
 Step 1:
 
-Creating a virtual environment,
+Creating a virtual environment:
 
 `python -m venv .venv`
 
-installing fastapi, uvicorn, pydantic, pytest, and httpx (needed by TestClient), and freezing to requirements.txt.
+installing fastapi, uvicorn, pydantic, pytest, and httpx (needed by TestClient)
 
 `pip install fastapi uvicorn pydantic pytest httpx`
 

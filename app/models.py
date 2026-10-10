@@ -1,9 +1,10 @@
 # continuing the above example...
 
 from datetime import datetime, timezone
-from pydantic import BaseModel, PositiveInt, ValidationError, Field, ConfigDict, PydanticUserError
-from fastapi import FastAPI
-from test import adapter 
+from enum import Enum
+from pydantic import BaseModel, Field, ConfigDict, AwareDatetime, IPvAnyAddress
+from uuid import uuid4
+ 
 
 # Literal for enforced string match, Union and Annoted for single entry point type that FastAPI endpoint can accept
 from typing import Literal, Union, Annotated
@@ -15,15 +16,14 @@ class EventBase(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
     event_id: str = Field(min_length=1, max_length=64)
-    timestamp: AwareDatatime
-    host: str = Field(min_length=10, max_length=30)
-    event_type: str
+    timestamp: AwareDatetime
+    host: str = Field(min_length=1, max_length=253)
     
 
 class AuthEvent(EventBase):
     event_type: Literal ["auth"]
     source_ip: IPvAnyAddress
-    username: str = Field(min_length=7, max_length=15)
+    username: str = Field(min_length=1, max_length=64)
     outcome: Literal ["success", "failed"]
 
 class ProcessEvent(EventBase):
@@ -50,19 +50,17 @@ Union[AuthEvent, ProcessEvent, NetworkEvent],
 Field(discriminator = "event_type"),
 ]
 
-Class Severity():
-    low: Literal["low"],
-    medium: Literal["medium"],
-    high: Literal["high"],
-critical: Literal["critical"]
+class Severity(str, Enum):
+    low = "low"
+    medium = "medium"
+    high = "high"
+    critical = "critical"
 
 # Alert section
 class Alert(BaseModel):
     alert_id: str = Field(default_factory=lambda: str(uuid4()))
     severity: Severity
     rule: ShortStr
-    reason: ShortStr
-    timestamp: AwareDatatime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    reason: str = Field(min_length=1, max_length=250)
+    timestamp: AwareDatetime = Field(default_factory=lambda: datetime.now(timezone.utc))
     event: SecurityEvent
-
-
