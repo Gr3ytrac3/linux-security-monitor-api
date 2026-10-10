@@ -12,5 +12,19 @@ A small security monitoring API that receives Linux security events, identifies 
 
 ### Installation
 
+Here's the detailed installation and each steps toward the completed pirture of the monitor
+
+Step 1:
+
+Creating a virtual environment,
+
+`python -m venv .venv`
+
+installing fastapi, uvicorn, pydantic, pytest, and httpx (needed by TestClient), and freezing to requirements.txt.
+
+`pip install fastapi uvicorn pydantic pytest httpx`
+
+
+
 ### Configuration
 
