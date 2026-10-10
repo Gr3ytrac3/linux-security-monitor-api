@@ -15,6 +15,7 @@ class PrivilegedExecRule:
         if path.startswith("//"):
             path = "/" + path.lstrip("/")
 
+
         for prefix in suspicious_paths():
             prefix = prefix.rstrip("/")
             if path == prefix or path.startswith(prefix + "/"):

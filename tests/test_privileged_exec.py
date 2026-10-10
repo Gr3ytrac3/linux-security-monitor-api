@@ -7,7 +7,7 @@ from tests.helpers import make_auth_event, make_process_event
 rule = PrivilegedExecRule()
 
 
-@pytest.mark.parametrize("path", ["/tmp/payload", "/dev/shm/x", "/tmp/../tmp/x", "/var/tmp/a"])
+@pytest.mark.parametrize("path", ["/tmp/payload", "/dev/shm/x", "/tmp/../tmp/x", "/var/tmp/a", "//tmp/payload"])
 def test_root_in_suspicious_path_alerts(path):
     alert = rule.evaluate(make_process_event(uid=0, exe_path=path))
     assert alert is not None
