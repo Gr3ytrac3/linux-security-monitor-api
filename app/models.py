@@ -3,10 +3,11 @@
 from datetime import datetime
 from pydantic import BaseModel, PositiveInt, ValidationError, Field
 from fastapi import FastAPI
+from typing import Literal
 
 
 
-class Event(BaseModel):
+class EventBase(BaseModel):
     event_id: str
     timestamp: datetime
     host: str
@@ -14,7 +15,7 @@ class Event(BaseModel):
 
 
 class AuthEvent(EventBase):
-
+    event_type: Literal ["auth"] = "auth"
     source_ip: str
     username: str
     outcome: str
