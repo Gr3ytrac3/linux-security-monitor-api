@@ -1,3 +1,5 @@
+# Authentication and validation
+
 import secrets
 
 from fastapi import HTTPException, Security, status
@@ -5,6 +7,7 @@ from fastapi.security import APIKeyHeader
 
 from app.config import get_api_key
 
+# Only accepts strings or none
 api_key_header = APIKeyHeader(name="X-API-Key", auto_error=False)
 
 

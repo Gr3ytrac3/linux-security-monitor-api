@@ -1,3 +1,5 @@
+# Rules listing and endpoints
+
 from fastapi import Depends, FastAPI
 
 from app.alerts import AlertStore

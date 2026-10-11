@@ -1,3 +1,5 @@
+# validated events
+
 from itertools import count
 
 from pydantic import TypeAdapter

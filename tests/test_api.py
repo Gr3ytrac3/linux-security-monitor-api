@@ -18,7 +18,7 @@ def clean_state(monkeypatch):
 def client():
     return TestClient(main.app)
 
-
+# basic data for testing
 def auth_payload(ts="2026-10-10T12:00:00Z", outcome="failed", ip="192.168.1.10"):
     return {
         "event_id": "evt_a",
