@@ -136,3 +136,38 @@ This is an assessment project. Alerts and detection state live in memory, so the
 are lost on restart; there is no rate limiting; and one shared API key is used.
 Run it behind TLS in any real deployment. See [docs/design.md](docs/design.md)
 for the full list.
+
+
+## Verification evidence
+
+Screenshots from my own runs while building and checking the project. The
+commands to reproduce them are in the Testing and Usage sections above.
+
+**Full test suite:** 53 tests pass (models, all three rules, and the API).
+
+![Full test suite: 53 passed](docs/evidence/full-test-suite.png)
+
+**Privileged execution rule:** 11 tests pass, including the `//tmp/payload`
+double-slash bypass case.
+
+![Privileged execution tests: 11 passed](docs/evidence/privileged-exec-tests.png)
+
+**Outbound connection rule:** 5 tests pass (unusual port alerts, allowed port
+and inbound traffic are ignored, IPv6 destinations work).
+
+![Outbound connection tests: 5 passed](docs/evidence/outbound-conn-tests.png)
+
+**API in use:** a suspicious process event returns 202 with a high-severity
+alert, and a request to `/alerts` without a key returns 401.
+
+![API request and response](docs/evidence/api-request-response.png)
+
+**Server log:** the same run as seen by the server. The `404` on `/` is
+expected, because the API has no root route.
+
+![Server log](docs/evidence/server-log.png)
+
+**Sample data:** the alert produced by the five failed logins in
+`sample_data/failed_auth_input.json`.
+
+![Failed login sample output](docs/evidence/failed-auth-sample.png)
