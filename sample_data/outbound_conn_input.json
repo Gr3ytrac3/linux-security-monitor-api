@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-10-10T12:00:00Z",
+  "host": "web01",
+  "event_id": "s2",
+  "event_type": "network",
+  "pid": 999,
+  "process_name": "curl",
+  "dest_ip": "8.8.8.8",
+  "dest_port": 4444,
+  "direction": "out"
+}

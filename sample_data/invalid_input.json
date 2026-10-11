@@ -1,0 +1,8 @@
+{
+  "timestamp": "2026-10-10T12:00:00Z",
+  "host": "web01",
+  "event_id": "s5",
+  "event_type": "auth",
+  "username": "root",
+  "outcome": "failed"
+}

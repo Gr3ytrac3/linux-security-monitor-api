@@ -1,0 +1,21 @@
+{
+  "accepted": true,
+  "alerts": [
+    {
+      "alert_id": "9a34e87d-5188-4cfe-866c-46dbd765af04",
+      "severity": "high",
+      "rule": "failed_auth",
+      "reason": "5 failed logins from 203.0.113.50 within 60 seconds",
+      "timestamp": "2026-10-10T23:59:23.066782Z",
+      "event": {
+        "event_id": "s3-4",
+        "timestamp": "2026-10-10T12:00:04Z",
+        "host": "web01",
+        "event_type": "auth",
+        "source_ip": "203.0.113.50",
+        "username": "root",
+        "outcome": "failed"
+      }
+    }
+  ]
+}

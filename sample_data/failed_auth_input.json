@@ -1,0 +1,47 @@
+[
+  {
+    "timestamp": "2026-10-10T12:00:00Z",
+    "host": "web01",
+    "event_id": "s3-0",
+    "event_type": "auth",
+    "source_ip": "203.0.113.50",
+    "username": "root",
+    "outcome": "failed"
+  },
+  {
+    "timestamp": "2026-10-10T12:00:01Z",
+    "host": "web01",
+    "event_id": "s3-1",
+    "event_type": "auth",
+    "source_ip": "203.0.113.50",
+    "username": "root",
+    "outcome": "failed"
+  },
+  {
+    "timestamp": "2026-10-10T12:00:02Z",
+    "host": "web01",
+    "event_id": "s3-2",
+    "event_type": "auth",
+    "source_ip": "203.0.113.50",
+    "username": "root",
+    "outcome": "failed"
+  },
+  {
+    "timestamp": "2026-10-10T12:00:03Z",
+    "host": "web01",
+    "event_id": "s3-3",
+    "event_type": "auth",
+    "source_ip": "203.0.113.50",
+    "username": "root",
+    "outcome": "failed"
+  },
+  {
+    "timestamp": "2026-10-10T12:00:04Z",
+    "host": "web01",
+    "event_id": "s3-4",
+    "event_type": "auth",
+    "source_ip": "203.0.113.50",
+    "username": "root",
+    "outcome": "failed"
+  }
+]

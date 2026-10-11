@@ -1,0 +1,24 @@
+{
+  "accepted": true,
+  "alerts": [
+    {
+      "alert_id": "e3870230-d610-4f83-a832-d206492b5ce9",
+      "severity": "high",
+      "rule": "privileged_exec",
+      "reason": "Root process payload executed from /tmp/payload",
+      "timestamp": "2026-10-10T23:59:23.019256Z",
+      "event": {
+        "event_id": "s1",
+        "timestamp": "2026-10-10T12:00:00Z",
+        "host": "web01",
+        "event_type": "process",
+        "pid": 4321,
+        "ppid": 1,
+        "uid": 0,
+        "exe_path": "/tmp/payload",
+        "parent_name": "bash",
+        "process_name": "payload"
+      }
+    }
+  ]
+}

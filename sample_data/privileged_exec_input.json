@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-10-10T12:00:00Z",
+  "host": "web01",
+  "event_id": "s1",
+  "event_type": "process",
+  "pid": 4321,
+  "ppid": 1,
+  "uid": 0,
+  "exe_path": "/tmp/payload",
+  "parent_name": "bash",
+  "process_name": "payload"
+}
